@@ -126,10 +126,10 @@ public class Executor {
 			String authToken = "";
 			String creativeTrackFile = "/media/mvolkovs/external4TB/Data/recsys2018/data/song_audio_features.txt";
 
-			String trainPath = "/media/mvolkovs/external4TB/Data/recsys2018/data/train";
-			String testFile = "/media/mvolkovs/external4TB/Data/recsys2018/data/test/challenge_set.json";
-			String pythonScriptPath = "/home/mvolkovs/projects/vl6_recsys2018/script/svd_py.py";
-			String cachePath = "/media/mvolkovs/external4TB/Data/recsys2018/models/svd/";
+			String trainPath = "/data/user/jpr/projects/recsys-challenge-2018/mpd/data";
+			String testFile = "/data/user/jpr/projects/recsys18-codes/data/challenge_set.json";
+			String pythonScriptPath = "/data/user/jpr/projects/recsys18-codes/vl6/script/svd_py.py";
+			String cachePath = "/data/user/jpr/projects/recsys18-codes/data/temp";
 
 			MLTimer timer = new MLTimer("main");
 			timer.tic();
