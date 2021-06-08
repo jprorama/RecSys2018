@@ -91,6 +91,8 @@ public class ALS {
 			this.timer.toc("initialized V");
 		}
 
+		this.timer.toc("zero cold start users");
+
 		for (int i = 0; i < R_train.getNRows(); i++) {
 			if (R_train.getRow(i) == null) {
 				// zero out cold start users
@@ -98,6 +100,8 @@ public class ALS {
 						i);
 			}
 		}
+		this.timer.toc("zero cold start items");
+
 		for (int i = 0; i < R_train_t.getNRows(); i++) {
 			if (R_train_t.getRow(i) == null) {
 				// zero out cold start items
@@ -105,6 +109,8 @@ public class ALS {
 						i);
 			}
 		}
+
+		this.timer.toc("begin training");
 
 		for (int iter = 0; iter < this.params.maxIter; iter++) {
 			this.solve(R_train, this.U, this.V);
